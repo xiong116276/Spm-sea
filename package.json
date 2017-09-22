@@ -1,0 +1,14 @@
+{
+  "description": "build with seajs",
+  "spm": {
+    "main": "main.js",
+    "dependencies":{
+    }
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://seajs.org/LICENSE.md"
+    }
+  ]
+}
