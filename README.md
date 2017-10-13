@@ -1,6 +1,9 @@
 ## Spm-sea
+
 seajs用spm-sea打包
+
 ##一环境准备
+
 #1.1操作系统
  windows
 #1.2 Nodejs
