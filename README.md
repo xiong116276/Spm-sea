@@ -1,40 +1,28 @@
-## Spm-sea
+# Spm-sea
 
 seajs用spm-sea打包
 
-## 一环境准备
-
-1.1操作系统 
-
+# 一环境准备
+## 1.1操作系统 
  windows
- 
-1.2 Nodejs
-
+## 1.2 Nodejs
  Nodejs (当前发布的最高版本)
  到nodejs官网主页下载最新版本的nodejs，默认安装即可。
  安装确认：打开CMD，执行node -v 出现node版本代表安装成功。
- 
-1.3 SPM
-
+## 1.3 SPM
  最新的spm打包工具会将模块打包压缩为传统的js文件格式，不用seajs进行模块加载。若要保持commonjs格式需使用spm-sea工具打包。
  以管理员身份打开CMD 执行 npm install spm -g
-
  出现warn提示可忽略，出现err根据提示重新进行操作。
-
  安装过程10分钟左右，安装后运行spm help，出现命令提示代表安装成功。
-
-1.4 SPM-SEA
-
+## 1.4 SPM-SEA
  将模块打包为commonjs格式使用的工具。
  安装命令同spm一样简单。以管理员身份运行CMD执行nmp install spm-sea -g
-
-二 配置与执行
-2.1 SPM构建打包
-2.1.1 备份文件
+# 二 配置与执行
+## 2.1 SPM构建打包
+## 2.1.1 备份文件
 为保证开发代码的完整，将需要打包的js文件复制到新建的文件夹中。此处新建spmweb文件夹，将index和modules两个文件夹拷贝到文件夹下。
-2.1.2 构建配置
+## 2.1.2 构建配置
 在spmweb下建立配置文件package.json (必须这样命名)。Spmweb下的目录结构如下。(Dist为构建过程中自动生成)
-
 编辑package.json。配置说明可查看官方文档中文版
 
 
