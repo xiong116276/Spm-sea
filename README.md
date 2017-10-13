@@ -4,13 +4,18 @@ seajs用spm-sea打包
 
 ## 一环境准备
 
-#1.1操作系统
+1.1操作系统 
+
  windows
-#1.2 Nodejs
+ 
+1.2 Nodejs
+
  Nodejs (当前发布的最高版本)
  到nodejs官网主页下载最新版本的nodejs，默认安装即可。
  安装确认：打开CMD，执行node -v 出现node版本代表安装成功。
-#1.3 SPM
+ 
+1.3 SPM
+
  最新的spm打包工具会将模块打包压缩为传统的js文件格式，不用seajs进行模块加载。若要保持commonjs格式需使用spm-sea工具打包。
  以管理员身份打开CMD 执行 npm install spm -g
 
@@ -18,7 +23,8 @@ seajs用spm-sea打包
 
  安装过程10分钟左右，安装后运行spm help，出现命令提示代表安装成功。
 
-#1.4 SPM-SEA
+1.4 SPM-SEA
+
  将模块打包为commonjs格式使用的工具。
  安装命令同spm一样简单。以管理员身份运行CMD执行nmp install spm-sea -g
 
