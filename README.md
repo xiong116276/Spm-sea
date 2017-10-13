@@ -23,28 +23,46 @@ seajs用spm-sea打包
 为保证开发代码的完整，将需要打包的js文件复制到新建的文件夹中。此处新建spmweb文件夹，将index和modules两个文件夹拷贝到文件夹下。
 ### 2.1.2 构建配置
 在spmweb下建立配置文件package.json (必须这样命名)。Spmweb下的目录结构如下。(Dist为构建过程中自动生成)。
+
 ![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-01.png)
+
 编辑package.json。配置说明可查看官方文档中文版
 ### 2.1.3编辑代码适应打包格式
  将所有require()函数中的别名调用改为相对路径调用。
  修改前用的是index.jsp配置的别名调用，如下：
+ 
+ ![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-02.png)
+ 
  修改后直接使用相对路径调用，如下:
+ 
+ ![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-03.png)
+ 
 ### 2.1.4 spm构建
   打开CMD切换到spmweb目录下执行spm build
-  在spmweb文件下多出了dist文件夹 dist/cweb/1.0.0/index路径下的main.js就是打包压缩出来的文件。将文件改名为main.min.js。新建一个main.js,将         main.min.js内代码格式化后写入main.js方便测试时寻找错误行。
+  
+  ![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-04.png)
+  
+  在spmweb文件下多出了dist文件夹 dist/cweb/1.0.0/index路径下的main.js就是打包压缩出来的文件。将文件改名为main.min.js。新建一个main.js,将   main.min.js内代码格式化后写入main.js方便测试时寻找错误行。
 ### 2.1.5 测试运行
  将构建生成的dist文件拷贝进项目工程下
  Spm打包后的文件使用的是传统方式，所以不需要引入seajs。将index.jsp页面代码修改只引入socket.js和main.js
- 运行查看效果
  Spm打包压缩后的文件使用传统方式，不破坏开发时使用模块化js的特性，保持了可维护性。但运行时失去了seajs异步懒加载的支持。
- 测试几个基本功能可用，测试未覆盖所有功能。
 ## 2.2 SPM-sea 构建打包
 ### 2.2.1 修改package.json
 为了将两次打包的文件区别开，将package.json中的name改为spmsea
+
+![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-sea-01.png)
+
 ### 2.2.2 修改代码适应spm-sea打包
 Spm-sea构建时会自动将所有要打包的js包裹为Modules/Transport规范define(id,des,function(a,b,c){})。所以我们项目代码中CMD规范的包裹define(function(a,b,c){})必须注释掉。Require调用依然是相对路径
+
+![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-sea-02.png)
+
 ### 2.2.3 执行spm-sea构建
 打开CMD切换到spmweb路径下执行spm-sea
+
+![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-sea-03.png)
+
 ### 2.2.4 测试运行
 将打包生成的dist文件夹拷贝到项目工程中，同样建立一个main.js存放格式化的js代码。
 修改index.js代码
