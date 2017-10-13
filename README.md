@@ -22,8 +22,8 @@ seajs用spm-sea打包
 ### 2.1.1 备份文件
 为保证开发代码的完整，将需要打包的js文件复制到新建的文件夹中。此处新建spmweb文件夹，将index和modules两个文件夹拷贝到文件夹下。
 ### 2.1.2 构建配置
-在spmweb下建立配置文件package.json (必须这样命名)。Spmweb下的目录结构如下。(Dist为构建过程中自动生成)
-![image](https://github.com/xiong116276/Spm-sea/edit/master/readme图片/spm-01.png)
+在spmweb下建立配置文件package.json (必须这样命名)。Spmweb下的目录结构如下。(Dist为构建过程中自动生成)。
+![image](https://github.com/xiong116276/Spm-sea/raw/master/readme/spm-01.png)
 编辑package.json。配置说明可查看官方文档中文版
 ### 2.1.3编辑代码适应打包格式
  将所有require()函数中的别名调用改为相对路径调用。
